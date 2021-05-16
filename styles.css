@@ -1,0 +1,617 @@
+*{
+    box-sizing:border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/*flex-contaiiner for navigation bar*/
+.navbar_flex{
+    display:flex;
+    background-color:rgba(255,255,255,0.9);
+    padding:0 0 0 15px;
+    margin:0px;
+    border:0px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 3px grey;
+    
+}
+.fixed_at_top{
+    position:fixed;
+    top:5px;
+    left:7px;
+    width:99%;
+}
+
+.navbar_flex a{
+    border-radius: 20px;
+    color:rgb(103,162,46);
+    font-weight: bold;
+    font-size:1em;
+    font-family: 'Anaheim';
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+}
+.navbar_flex a:hover{
+    background-color: rgb(103,162,46);
+    color: white;
+    
+}
+
+.navbar_img{
+    margin: 0 10px 0 10px;
+}
+
+.intro_flex{
+    display:flex;
+    background-color: white;
+    margin:50px 30px 30px 30px;
+    
+}
+.intro_left{
+    font-family: 'Anaheim';
+    width:40%;
+    margin-right: 20px;
+    padding:20px;
+    
+}
+.intro_right{
+    font-family: 'Anaheim';
+    width:60%;
+    margin-right: 20px;
+    padding:20px;
+    
+}
+.intro-left img{
+    width: 10%;
+}
+.specialities-button{
+    background-color:rgb(103,162,46);
+    margin: 5% auto;
+    padding:15px 25px;
+    border: none;
+    border-radius: 25px;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    animation: jiggle2 1s ease-out;
+    animation-delay: 7s;;
+}
+/*.specialities-button a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}*/
+.specialities-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.specialities-button span:after {
+    content: '\00bb';
+    font-size:2em;
+    position: absolute;
+    opacity: 0;
+    top: -11px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.specialities-button:hover span {
+    padding-right: 25px;
+}
+
+.specialities-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.section_header{
+    height: 50vh;
+    margin:30px 5% 30px 5%;
+    background-image: linear-gradient(to right bottom,rgba(255, 0, 0, 0.9),rgba(201, 5, 184, 0.9)),url(Images/sp_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 40vh,0 100%);
+    position: relative;
+}
+.searchbar{
+    display: flex;
+    margin: 0 5%;
+    flex-direction:row;
+    background-image: linear-gradient(to right bottom,rgba(255, 0, 0, 0.9),rgba(201, 5, 184, 0.9)),url(Images/sp_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 3%;
+    align-items: center;
+}
+.searchbar_text{
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    border-right: 2px white solid;
+    color: white;
+    padding-right: 5%;
+    width:40%;   
+}
+.searchbar_form{
+    display:inline;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    color: white;
+    padding-left: 5%;  
+    width:100%; 
+}
+.searchbar_form:hover{
+    transform: scale(1.1);
+}
+.searchbar_form form input{
+    display:inline;
+    font-size:1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(255,255,255,0.8);
+    border:none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:bolder;
+    width:100%;
+}
+.search-button{
+    background-color:rgba(255,255,255,0.8);
+    font-size:1rem;
+    margin: 0 0 0 3%;
+    padding: 0.9rem 1rem;
+    border: none;
+    border-radius:0 5px 5px 0;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    color:rgb(201, 5, 184);
+    text-decoration: none;
+    font-weight: bold;
+}
+.section_header:hover h1{
+    animation: moveinright 1s ease-out;
+}
+.section_header:hover p{
+    animation: moveinleft 1s ease-out;
+}
+.text_box{
+    position: absolute;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.section_title{
+    display:block;
+    text-align:center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+    color: white;
+    font-size: 2.5em;
+    letter-spacing: 10px;
+    margin-bottom: 20px;
+    
+}
+/*
+.section_title:hover{
+    animation: moveinleft 1s ease-out;
+}*/
+.section_subtitle{
+    display:block;
+    text-align:center;
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    
+}
+/*
+.specialities_subtitle:hover{
+    animation: moveinright 1s ease-out;
+}
+*/
+
+
+.specialities_flex,.reviews_flex{
+    display: flex;
+    flex-direction: column;
+    margin:30px 5% 30px 5%;
+    align-items: center;
+}
+
+.food_card,.reviews_card{
+    padding: 15px;
+    margin: 10px;
+    border: none;
+    border-radius: 0 10px 0 10px;
+    width:100%;
+    color:grey;
+    box-shadow: 1px 1px 3px grey;
+    font-family: 'Abhaya Libre';
+    
+}
+.food_card img{
+    width:49%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 0 10px 0 0px;
+    margin:-15px -15px -15px 100px;
+}
+.veg-icon{
+    margin:0;
+    padding:0;
+}
+.veg-icon img{
+    margin:0;
+    padding:0;
+}
+.food_card:hover{
+    box-shadow: 5px 5px 10px grey;
+    transform: scale(1.05);
+}
+.reviews_card:hover{
+    box-shadow: 5px 5px 10px grey;
+    transform: scale(1.05);
+}
+.dp{
+    margin-right:10%;
+    float: left;
+    width:360px;
+}
+.dish_name{
+    font-size:3em;
+    font-family: 'Pacifico';
+    
+    margin:0;
+    
+}
+.discount_tag{
+    font-size:1.5em;
+    font-weight: bold;
+    color:rgb(103,162,46);
+    margin:0;
+}
+.price_tag{
+    float:right;
+    font-size:1.5em;
+    font-family: 'Titillium Web', sans-serif;
+    color:rgb(103,162,46);
+}
+
+.add-button{
+    font-family: 'Anaheim';
+    background-color:red;
+    margin: 0;
+    padding:10px 25px;
+    border: none;
+    border-radius: 25px;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+    z-index:2;
+}
+.add-button:hover{
+    animation: jiggle 0.5s ease-out;
+}
+/*.specialities-button a{
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}*/
+.add-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.add-button span:after {
+    background-color: rgb(103,162,46);
+    color:white;
+    content: "ADDED";
+    font-size:1em;
+    position: absolute;
+    opacity: 0;
+    top: 0px;
+    right: -15px;/*this has nothing to do with the final position of ED this is the initial position of the ED*/
+    transition: 0.5s;
+    
+}
+.add-button:focus{
+    background-color: rgb(103,162,46);
+}
+.add-button:focus span {
+    
+    opacity: 1;
+    padding-right: 25px;
+    padding-left:18px;
+}
+
+.add-button:focus span:after {
+    opacity: 1;
+    right: 18px;
+}
+
+
+.reco_flex{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin:30px 5% 30px 5%;
+    /*background-color: green;*/
+    padding:0;
+}
+.reco_card{
+    
+    width:350px;
+    /*background-color: yellow;*/
+    margin:2%;
+    text-align: center;
+    border-radius: 10px;
+    color:grey;
+    box-shadow: 1px 1px 3px grey;
+}
+.reco_card:hover{
+    box-shadow: 5px 5px 10px grey;
+    transform: scale(1.1);
+}
+.reco_card h1{
+    font-family: 'Pacifico';
+    margin:0;
+}
+.reco_card h2{
+    font-family: 'Titillium Web', sans-serif;
+    color:rgb(103,162,46);
+    font-size: 2rem;
+    margin:0;
+}
+.reco_card p{
+    font-family: 'Abhaya Libre';
+    margin-right:5%;
+    margin-left:5%;
+} 
+.reco_card img{
+    border-radius: 10px 10px 0 0;
+    width:100%;
+    height:15rem;
+    object-fit: cover;
+    margin: 0 -20% 0 -20%;
+}
+.section-review{
+    display: flex;
+    flex-direction: horizontal;
+    background: linear-gradient(to right,brown,rgb(250, 152, 4));
+    align-items: center;
+    justify-content:center;
+    margin:30px 5% 30px 5%;
+    height: 50rem;
+}
+.review{
+    background-image: linear-gradient(100deg,rgba(255,255,255,0.7) 60%, transparent 60%),url("Images/south-indian-khana.jpg");
+    background-repeat: no-repeat;
+    height: 35rem;
+    background-size: cover;
+    border-radius: 10px;
+    width:70%;
+    box-shadow:0 1.5rem 4rem rgba(0,0,0,0.5) ;
+    padding: 0% 32% 0 5%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bold;
+}
+.review h2{
+    color:brown;
+    font-size: 2.5rem;
+    font-family: 'Anaheim';
+}
+.review form input, .review form textarea{
+    display: block;
+    width: 80%;
+    font-size:1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    background-color: rgba(255,255,255,0.8);
+    border:none;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight:bolder;
+    border-bottom:3px transparent solid;
+    transition: all 0.3s;
+    resize:none;
+}
+.review form input:focus, .review form textarea:focus{
+    outline: none;
+    border-bottom:3px rgb(6, 146, 1) solid;
+}
+.review form input:focus:invalid{
+    border-bottom:3px rgb(238, 16, 0) solid;
+}
+/*.form input::-webkit-input-placeholder{
+    
+}*/
+.group:not(:last-child){
+    margin-bottom:2.5rem;
+}
+.review form label{
+    display: block;
+    margin: 0.2rem 1.5rem;
+    font-size:0.8rem;
+    transition: all .3s;
+}
+.review form input:placeholder-shown + label, .review form textarea:placeholder-shown + label{
+    opacity:0;
+    visibility: hidden;
+    transform: translateY(-2.5rem);
+}
+.submit-button{
+    background-color:brown;
+    margin: 0 0 0 5%;
+    padding:15px 25px;
+    border: none;
+    border-radius: 25px;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    color:white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.submit-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.submit-button span:after {
+    content: '\00bb';
+    font-size:2em;
+    position: absolute;
+    opacity: 0;
+    top: -11px;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.submit-button:hover span {
+    padding-right: 25px;
+}
+
+.submit-button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+.footer{
+    display:flex;
+    flex-direction: row;
+    margin:0;
+    width:100%;
+    background-color:rgb(58,64,80);
+    color:white;
+    justify-content: center;
+    align-items:center;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: bolder;
+}
+.left_footer{
+    width:40%;
+    padding:2%;
+    border-right: 1px white solid;
+}
+.left_footer img{
+    width:90%;
+}
+.right_footer{
+    width:60%;
+    padding:2%;
+}
+.footer h1{
+    font-size: 3rem;
+}
+.big_logo{
+    
+    padding:10px;
+}
+
+.footer_text ul{
+    list-style-type: none;
+    text-align:left;
+}
+.footer_text ul li{
+    display: inline-block;
+    
+    padding: 0% 5%;
+    margin-right: 5%;
+}
+.footer_text ul li:hover{
+    transform: scale(1.3);
+}
+.footer_text ul li a{
+    color: white;
+    text-decoration: none;
+}
+.top-button{
+    background-color:white;
+    margin: 0;
+    padding:15px 25px;
+    border: none;
+    border-radius: 25px;
+    display:inline-block;
+    text-align:center;
+    cursor:pointer;
+    color:rgb(58,64,80);
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Anaheim';
+}
+
+.top-button span {
+    cursor: pointer;
+    display: inline-block;
+}
+
+@keyframes moveinleft{
+    0%{
+        opacity:0;
+        transform: translateX(-100px);
+    }
+    80%{
+        opacity:0.8;
+        transform: translateX(10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes moveinright{
+    0%{
+        opacity:0;
+        transform: translateX(100px);
+    }
+    80%{
+        opacity:0.8;
+        transform: translateX(-10px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes jiggle{
+    20%{
+        transform: rotate(45deg);
+    }
+    40%{
+        transform: rotate(-45deg);
+    }
+    60%{
+        transform: rotate(45deg);
+    }
+    80%{
+        transform: rotate(-45deg);
+    }
+}
+
+@keyframes jiggle2{
+    20%{
+        transform: rotate(15deg);
+    }
+    40%{
+        transform: rotate(-15deg);
+    }
+    60%{
+        transform: rotate(15deg);
+    }
+    80%{
+        transform: rotate(-15deg);
+    }
+}
