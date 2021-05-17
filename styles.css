@@ -226,7 +226,7 @@ html{
 
 .food_card,.reviews_card{
     padding: 15px;
-    margin: 0;
+    margin: 2% 0 2% 0;
     border: none;
     border-radius: 0 10px 0 10px;
     width:90%;
