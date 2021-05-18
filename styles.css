@@ -235,7 +235,7 @@ html{
     .food_card img{
         border-radius: 10px 10px 0 0;
         width:100%;
-        height:15rem;
+        height:100%;;
         object-fit: cover;
         margin: 0 -20% 0 -20%;
     }
